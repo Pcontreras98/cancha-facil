@@ -35,21 +35,46 @@ h1,h2,h3{
     text-align: center;
 }
 /*Titulo*/
-.titulo{
+.titulo {
     background-color: var(--primario);
     font-weight: 600;
     font-size: 2rem;
     text-transform: uppercase;
     margin: 0 auto;
-    padding: 2rem;
-    position: relative; 
+    padding: 2rem 16rem; 
+    position: relative;
     cursor: pointer;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
 }
-.head-logo {
-    position: absolute;
-    top: 25%;
-    right: 43%;
-    
+.head-logo{
+    height: 24px;
+    width: auto;
+}
+.left-content {
+    display: flex; 
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.right-content {
+    display: flex; 
+    align-items: center;
+    gap: 8rem;
+    margin-right: 10rem; 
+    font-size: 2rem;
+}
+
+.right-content span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.phone-link {
+    text-decoration: none;
+    color: black;
 }
 
 /*Hero*/
@@ -255,17 +280,13 @@ h1,h2,h3{
         font-size: 1.8rem;
         padding: 2rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: auto;
+        gap: 10px;
     }
-    .head-logo {
-        position: absolute;
-        top: 29%;
-        right: 28%;
-        width: 19px;
-        height: 19px;
+    .right-content{
+        gap: 3rem
     }
-
+    
     
     .hero {
         min-height: auto;
