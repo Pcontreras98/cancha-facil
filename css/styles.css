@@ -1,0 +1,557 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #000000;
+    --primario: #ACF50D;
+    --secundario: #003E1A;
+}
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /* 1rem = 16px */
+    font-family: "Kufam", "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+/* Tipografia*/
+h1{
+    font-size: 3.8rem;     
+}
+h2{
+    font-size: 2.8rem;     
+}
+h3{
+    font-size: 1.8rem;     
+}
+h1,h2,h3{
+    text-align: center;
+}
+/*Titulo*/
+.titulo {
+    background-color: var(--primario);
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 2rem 16rem;
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+    position: relative;
+    cursor: pointer;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.head-logo{
+    height: 24px;
+    width: auto;
+}
+.left-content {
+    display: flex; 
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.right-content {
+    display: flex; 
+    align-items: center;
+    gap: 8rem;
+    margin-right: 10rem; 
+    font-size: 2rem;
+}
+
+.right-content span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.phone-link {
+    text-decoration: none;
+    color: black;
+}
+
+/*Hero*/
+.hero{
+    background-color: var(--secundario);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.contenido-hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.contenido-hero h2{
+    text-align: left;
+    color: var(--primario);
+    font-weight: 600;
+    font-size: 5.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: -42px;
+}
+.contenido-hero p{
+    text-align: left;
+    color: var(--blanco);
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 2.1rem;
+    margin-bottom: 4rem;
+    line-height: 2.8rem;
+    
+}
+.imagen-logo{
+    position: relative;
+    right: 14%;
+    width: 100%;
+    max-width: 290px;
+    height: auto; 
+    margin: 20px;
+    border-radius: 20px;
+}
+
+/*Footer*/
+.footer{
+    background-color: var(--negro);
+    padding-bottom: max(3rem, env(safe-area-inset-bottom));
+    margin: 0 auto;
+} 
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+.logo{
+    position: relative;
+    top: 6px; 
+}
+.logo img {
+    width: 170px;
+    height: auto;
+}
+.navegacion{
+    display: flex;
+    gap: 4rem;
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: 200;
+}
+
+/*Main*/
+.opciones-canchas{
+    background-color: var(--primario); 
+    text-align: center;
+    padding: 9rem;
+    position: relative;
+    padding-bottom: 16rem;
+}
+
+
+.opciones-canchas::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    background: linear-gradient(
+        to bottom,
+        var(--primario), 
+        var(--primario) 10px,
+        var(--secundario) 10px, 
+        var(--secundario)12px,
+        var(--primario) 12px,
+        var(--primario) 22px,
+        var(--secundario) 22px, 
+        var(--secundario) 26px,
+        var(--primario) 26px,
+        var(--primario) 38px,
+        var(--secundario) 38px, 
+        var(--secundario) 44px,
+        var(--primario) 44px
+    );
+}
+
+
+.opciones-canchas h2{
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
+.card p {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 1.4rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    max-width: 474px;
+    height: auto;
+    aspect-ratio: 474 / 330;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2.8rem;
+}
+
+.descarga-app {
+    background-color: var(--secundario); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem; 
+    position: relative;
+    gap: 1rem; 
+    overflow: hidden;
+    min-height: 476px;
+}
+
+.celular-izquierdo, .celular-derecho {
+    width: 450px; 
+    height: auto;
+}
+
+.celular-izquierdo {
+    transform: rotate(-4deg) translateX(57px) translateY(120px); 
+}
+
+.celular-derecho {
+    transform: rotate(4deg) translateX(-45px) translateY(120px);
+}
+
+.contenido-centro {
+    text-align: center;
+    color: var(--primario);
+}
+
+.contenido-centro h2 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primario);
+}
+
+.boton-descarga {
+    background-color: var(--primario);
+    color: var(--negro);
+    padding: 1.4rem 3rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 3rem;
+    display: inline-block;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    min-height: 4.4rem;
+    line-height: 1.2;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.phone-link:active,
+.boton-descarga:active {
+    transform: scale(0.98);
+}
+
+/* Tablet y móvil */
+@media (max-width: 1024px) {
+    .titulo {
+        padding: 1.5rem 3rem;
+    }
+
+    .right-content {
+        gap: 2rem;
+        margin-right: 0;
+    }
+
+    .contenido-hero h2 {
+        font-size: clamp(3rem, 5vw, 4.2rem);
+    }
+
+    .celular-izquierdo,
+    .celular-derecho {
+        width: min(38vw, 320px);
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.4rem;
+        padding: 1.2rem max(1.5rem, env(safe-area-inset-right)) 1.2rem max(1.5rem, env(safe-area-inset-left));
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .left-content,
+    .right-content {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .right-content {
+        gap: 1.5rem;
+        margin-right: 0;
+        font-size: 1.4rem;
+        flex-wrap: wrap;
+    }
+
+    .phone-link span {
+        gap: 0.4rem;
+    }
+
+    .phone-link img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 3rem 0 4rem;
+    }
+
+    .hero .contenedor {
+        width: min(92%, 120rem);
+    }
+
+    .contenido-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .seccion-hero {
+        order: 1;
+        width: 100%;
+    }
+
+    .contenido-hero h2 {
+        font-size: clamp(2.4rem, 7vw, 3.2rem);
+        text-align: center;
+        margin-top: 1rem;
+        line-height: 1.15;
+    }
+
+    .contenido-hero p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        max-width: 36rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contenido-hero .boton-descarga {
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    .imagen-logo {
+        order: 2;
+        position: static;
+        right: auto;
+        width: min(75%, 24rem);
+        max-width: 24rem;
+        margin: 0 auto;
+    }
+
+    .opciones-canchas {
+        padding: 4rem 1.5rem 12rem;
+    }
+
+    .opciones-canchas h2 {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        margin-top: 0;
+        margin-bottom: 3rem;
+        line-height: 1.2;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+
+    .card img {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .card p {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .card.space {
+        margin-bottom: 2rem;
+    }
+
+    .descarga-app {
+        flex-direction: column;
+        padding: 4rem 1.5rem 3rem;
+        gap: 2rem;
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .celular-izquierdo {
+        order: 1;
+        width: min(85%, 28rem);
+        max-width: 28rem;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .celular-derecho {
+        display: none;
+    }
+
+    .contenido-centro {
+        order: 2;
+        margin-top: 0;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .contenido-centro h2 {
+        font-size: clamp(2.4rem, 7vw, 3.2rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .boton-descarga {
+        font-size: 1.8rem;
+        padding: 1.6rem 2rem;
+        width: 100%;
+        max-width: 32rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer .barra {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .logo {
+        top: 0;
+        margin-bottom: 0;
+    }
+
+    .logo img {
+        width: 14rem;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .navegacion__enlace {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+        padding: 0.6rem 0;
+        min-height: 4.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .titulo {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .head-logo {
+        height: 20px;
+    }
+
+    .right-content {
+        gap: 1rem;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .right-content > span:last-child {
+        display: none;
+    }
+
+    .phone-link span {
+        font-size: 1.1rem;
+    }
+
+    .contenido-hero h2 br {
+        display: none;
+    }
+
+    .contenido-hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .opciones-canchas h2 br {
+        display: none;
+    }
+
+    .opciones-canchas {
+        padding-bottom: 10rem;
+    }
+
+    .opciones-canchas::after {
+        height: 40px;
+    }
+
+    .descarga-app {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .celular-izquierdo {
+        width: min(92%, 22rem);
+    }
+}
